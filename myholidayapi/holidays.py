@@ -1,5 +1,5 @@
 from myholidayapi.client import HolidayAPIClient
-
+from myholidayapi.utils import clear_params
 
 class Holidays:
     def __init__(self, client: HolidayAPIClient) -> None:
@@ -33,11 +33,22 @@ class Holidays:
         :param pretty:
         :return: json formatted holidays
 
-        lalalalallala
+        holidays
         '''
         params = {
             "country": country,
-            "year": year}
-
-        response = self.client.request("/holidays", params=params)['holidays']
+            "year": year,
+            "month": month,
+            "day": day,
+            "public": public,
+            "subdivisions": subdivisions,
+            "search": search,
+            "language": language,
+            "previous": previous,
+            "upcoming": upcoming,
+            "format": format,
+            "pretty": pretty
+        }
+        clean_params = clear_params(params)
+        response = self.client.request("/holidays", params=clean_params)['holidays']
         return response
