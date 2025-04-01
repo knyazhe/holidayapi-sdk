@@ -1,12 +1,12 @@
-# 🏖️ holidayapi-alt
+# holidayapi-alt
 
-**Unofficial Python SDK for [HolidayAPI](https://holidayapi.com)** — simple, clean, and ready to use.
+**Unofficial Python SDK for [HolidayAPI](https://holidayapi.com)** 
 
 > This project is an independent alternative to the [official SDK](https://github.com/holidayapi/holidayapi-python).
 
 ---
 
-## 🚀 Quick Example
+## Quick Example
 
 ```python
 from holidayapi import HolidayAPI
