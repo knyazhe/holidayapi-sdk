@@ -1,10 +1,7 @@
-import config
-from myholidayapi import MyHolidayAPI
 
-holidayapi = MyHolidayAPI(config.API)
+from holidayapi_sdk import HolidayAPI
+from holidayapi_sdk.models import *
 
-print(holidayapi.holidays.get(country="RU", year="2024"))
-
-# print(holidayapi.languages.get())
-# print(holidayapi.workday.get())
-# print(holidayapi.workdays.get())
+holidayapi = HolidayAPI("your_api")
+query = HolidaysQuery(country="RU", year=2024)
+print(holidayapi.holidays.get(query))
